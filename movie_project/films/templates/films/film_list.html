@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список фильмов</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-primary">Список фильмов</h1>
+        {% for film in films %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h4 class="card-title text-secondary">{{ film.title }}</h4>
+                    <p class="card-text">{{ film.description }}</p>
+                    <p class="card-text"><strong>Отзыв:</strong> {{ film.review }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
